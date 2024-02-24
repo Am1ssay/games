@@ -13,7 +13,6 @@ FPS = 60
 WHITE = (225, 225, 225)
 BLACK = (0, 0, 0)
 GRAY = (32, 33, 36)
-
 start_img = pygame.image.load('Assets/start_img.png')
 start_img = pygame.transform.scale(start_img, (60, 64))
 
