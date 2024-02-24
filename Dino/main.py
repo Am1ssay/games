@@ -1,8 +1,3 @@
-# Dino
-
-# Author : Prajjwal Pathak (pyguru)
-# Date : Sunday, 17 October, 2021
-
 import random
 import pygame
 
@@ -15,13 +10,9 @@ win = pygame.display.set_mode(SCREEN, pygame.NOFRAME)
 clock = pygame.time.Clock()
 FPS = 60
 
-# COLORS *********************************************************************
-
 WHITE = (225,225,225)
 BLACK = (0, 0, 0)
 GRAY = (32, 33, 36)
-
-# IMAGES *********************************************************************
 
 start_img = pygame.image.load('Assets/start_img.png')
 start_img = pygame.transform.scale(start_img, (60, 64))
@@ -38,13 +29,9 @@ replay_rect.y = 100
 numbers_img = pygame.image.load('Assets/numbers.png')
 numbers_img = pygame.transform.scale(numbers_img, (120, 12))
 
-# SOUNDS *********************************************************************
-
 jump_fx = pygame.mixer.Sound('Sounds/jump.wav')
 die_fx = pygame.mixer.Sound('Sounds/die.wav')
 checkpoint_fx = pygame.mixer.Sound('Sounds/checkPoint.wav')
-
-# OBJECTS & GROUPS ***********************************************************
 
 ground = Ground()
 dino = Dino(50, 160)
@@ -53,8 +40,6 @@ cactus_group = pygame.sprite.Group()
 ptera_group = pygame.sprite.Group()
 cloud_group = pygame.sprite.Group()
 stars_group = pygame.sprite.Group()
-
-# FUNCTIONS ******************************************************************
 
 def reset():
 	global counter, SPEED, score, high_score
@@ -72,22 +57,10 @@ def reset():
 	stars_group.empty()
 
 	dino.reset()
-
-# CHEATCODES *****************************************************************
-
-# GODMODE -> immortal jutsu ( can't die )
-# DAYMODE -> Swap between day and night
-# LYAGAMI -> automatic jump and duck
-# IAMRICH -> add 10,000 to score
-# HISCORE -> highscore is 99999
-# SPEEDUP -> increase speed by 2
-
 keys = []
 GODMODE = False
 DAYMODE = False
 LYAGAMI = False
-
-# VARIABLES ******************************************************************
 
 counter = 0
 enemy_time = 100
